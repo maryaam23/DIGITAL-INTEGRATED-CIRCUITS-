@@ -1,0 +1,61 @@
+# header information:
+HAND_ic|9.07
+
+# Views:
+Vlayout|lay
+Vschematic|sch
+
+# External Libraries:
+
+LInvertor_ic|Invertor_ic
+
+LNand_ic|Nand_ic
+
+# Technologies:
+Tmocmos|ScaleFORmocmos()D22.0
+
+# Cell AND;1{lay}
+CAND;1{lay}||mocmos|1694091051596|1694108181707||DRC_last_good_drc_area_date()G1694100098062|DRC_last_good_drc_bit()I18|DRC_last_good_drc_date()G1694094734105
+INand_ic:Nand;2{lay}|Nand@0||20.4|-65.6|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NMetal-1-Metal-2-Con|contact@0||4.4|-72.6||||
+NMetal-1-Polysilicon-1-Con|contact@1||-42.6|-17.6||||
+NMetal-1-Polysilicon-1-Con|contact@2||-41.5|-72.6||||
+NMetal-1-Metal-2-Con|contact@3||121.1|-18.6||||
+IInvertor_ic:inv_lay;1{lay}|inv_lay@1||105|-10.5|||D5G4;
+Ngeneric:Invisible-Pin|pin@2||-84.6|-40.7|||||SIM_spice_card(D5G3;)S[vdd vdd 0 DC 1.3,va Andin1 0 pulse 1.3 0 0 1n 1n 20n 44n,vb Andin2 0 pulse 1.3 0 0 1n 1n 30n 44n,cload Andout 0 50fF ,.tran 150n,".include C:\\Users\\khaled\\Desktop\\22nm-2.txt"]
+AMetal-2|net@7||1|S900|Nand@0|a2|4.4|-17.6|contact@0||4.4|-72.6
+AMetal-1|net@10||1|S0|Nand@0|a1|-18.6|-17.6|contact@1||-42.6|-17.6
+AMetal-1|net@11||1|S0|contact@0||4.4|-72.6|contact@2||-41.5|-72.6
+AMetal-1|net@17||1|S1800|Nand@0|y|26.9|-17.7|inv_lay@1|input|53.6|-17.7
+AMetal-1|net@18||1|S1800|inv_lay@1|output|102.8|-18.6|contact@3||121.1|-18.6
+EAndin1||D5G2;|contact@1||U
+EAndin2||D5G2;|contact@2||U
+EAndout||D5G2;|contact@3||U
+X
+
+# Cell ANDSCH;1{sch}
+CANDSCH;1{sch}||schematic|1694100152526|1694107220699|
+INand_ic:Nand;1{sch}|Nand@0||-6.8|-3.4|||D5G4;
+Ngeneric:Facet-Center|art@0||0|0||||AV
+NOff-Page|conn@0||-26.3|7.1||||
+NOff-Page|conn@1||-26.9|0.3||||
+NOff-Page|conn@2||33.7|1.7||||
+IInvertor_ic:invertor;1{sch}|invertor@1||33.1|-8.4|||D5G4;
+NWire_Pin|pin@1||-22|7.1||||
+NWire_Pin|pin@2||-24.9|0.1||||
+Ngeneric:Invisible-Pin|pin@4||-26|-12.1|||||SIM_spice_card(D5G1;)S[vdd vdd 0 DC 1.3,va A 0 pulse 1.3 0 0 1n 1n 20n 44n,vb B 0 pulse 1.3 0 0 1n 1n 20n 64n,cload Y 0 50fF ,.tran 150n,".include C:\\Users\\khaled\\Desktop\\22nm-2.txt"]
+NWire_Pin|pin@7||31.7|1.6||||
+NWire_Pin|pin@8||4.1|6||||
+Awire|net@2|||1800|conn@0|y|-24.3|7.1|pin@1||-22|7.1
+Awire|net@3|||2700|Nand@0|A|-22|6.1|pin@1||-22|7.1
+Awire|net@4|||900|conn@1|y|-24.9|0.3|pin@2||-24.9|0.1
+Awire|net@5|||0|Nand@0|B|-22|0.1|pin@2||-24.9|0.1
+Awire|net@10|||1800|invertor@1|Y|23.1|1.6|pin@7||31.7|1.6
+Awire|net@11|||900|conn@2|a|31.7|1.7|pin@7||31.7|1.6
+Awire|net@12|||1800|Nand@0|Out|-2.6|6|pin@8||4.1|6
+Awire|net@13|||2700|invertor@1|A|4.1|1.6|pin@8||4.1|6
+EA||D5G2;|conn@0|a|U
+EB||D5G2;|conn@1|y|U
+EY||D5G2;|conn@2|y|U
+X
